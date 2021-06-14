@@ -12,6 +12,9 @@ namespace MaximumOfThreeVariables
 
             int maxNumberTwo = max.MaxInteger(540, 692, 436);
             Console.WriteLine(maxNumberTwo + " is maximum");
+
+            int maxNumberThree = max.MaxInteger(540, 692, 911);
+            Console.WriteLine(maxNumberThree + " is maximum");
         }
     }
 }
