@@ -102,5 +102,53 @@ namespace MaximumOfThreeVariblesTest
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
+
+        [Test]
+        public void GivenFirstStringWordMax_WhenAct_ReturnFirstWord()
+        {
+            // Arrange
+            string firstWord = "Peach";
+            string secondWord = "Apple";
+            string thirdWord = "Banana";
+            string expected = "Peach";
+
+            // Act
+            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+
+            // Assert
+            Assert.AreEqual(expected, maxString);
+        }
+
+        [Test]
+        public void GivenSecondStringWordMax_WhenAct_ReturnSecondWord()
+        {
+            // Arrange
+            string firstWord = "Apple";
+            string secondWord = "Peach";
+            string thirdWord = "Banana";
+            string expected = "Peach";
+
+            // Act
+            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+
+            // Assert
+            Assert.AreEqual(expected, maxString);
+        }
+
+        [Test]
+        public void GivenThirdStringWordMax_WhenAct_ReturnThirdWord()
+        {
+            // Arrange
+            string firstWord = "Banana";
+            string secondWord = "Apple";
+            string thirdWord = "Peach";
+            string expected = "Peach";
+
+            // Act
+            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+
+            // Assert
+            Assert.AreEqual(expected, maxString);
+        }
     }
 }
