@@ -4,9 +4,11 @@ namespace MaximumOfThreeVariables
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Welcome to Find Maximum Problem using Generics!");
+            MaxNumber max = new MaxNumber();
+            int maxNumber = max.MaxInteger(10, 8, 9);
+            Console.WriteLine(maxNumber + " is maximum");
         }
     }
 }

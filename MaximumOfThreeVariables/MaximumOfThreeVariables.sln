@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumOfThreeVariables", "MaximumOfThreeVariables\MaximumOfThreeVariables.csproj", "{F93EA2CD-17AC-4138-AE08-9A3E562A5B70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximumOfThreeVariables", "MaximumOfThreeVariables\MaximumOfThreeVariables.csproj", "{F93EA2CD-17AC-4138-AE08-9A3E562A5B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumOfThreeVariblesTest", "MaximumOfThreeVariblesTest\MaximumOfThreeVariblesTest.csproj", "{2212ABEA-887F-44FC-B5F2-27F6F65CD494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F93EA2CD-17AC-4138-AE08-9A3E562A5B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F93EA2CD-17AC-4138-AE08-9A3E562A5B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F93EA2CD-17AC-4138-AE08-9A3E562A5B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2212ABEA-887F-44FC-B5F2-27F6F65CD494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2212ABEA-887F-44FC-B5F2-27F6F65CD494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2212ABEA-887F-44FC-B5F2-27F6F65CD494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2212ABEA-887F-44FC-B5F2-27F6F65CD494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
