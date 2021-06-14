@@ -54,5 +54,53 @@ namespace MaximumOfThreeVariblesTest
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
+
+        [Test]
+        public void GivenFirstFloatNumberMax_WhenAct_ReturnFirstNumber()
+        {
+            // Arrange
+            float firstNumber = 35.1f;
+            float secondNumber = 22.4f;
+            float thirdNumber = 31.9f;
+            float expected = 35.1f;
+
+            // Act
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+
+            // Assert
+            Assert.AreEqual(expected, maxNumber);
+        }
+
+        [Test]
+        public void GivenSecondFloatNumberMax_WhenAct_ReturnSecondNumber()
+        {
+            // Arrange
+            float firstNumber = 22.4f;
+            float secondNumber = 35.1f;
+            float thirdNumber = 31.9f;
+            float expected = 35.1f;
+
+            // Act
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+
+            // Assert
+            Assert.AreEqual(expected, maxNumber);
+        }
+
+        [Test]
+        public void GivenThirdFloatNumberMax_WhenAct_ReturnThirdNumber()
+        {
+            // Arrange
+            float firstNumber = 31.9f;
+            float secondNumber = 22.4f;
+            float thirdNumber = 35.1f;
+            float expected = 35.1f;
+
+            // Act
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+
+            // Assert
+            Assert.AreEqual(expected, maxNumber);
+        }
     }
 }
