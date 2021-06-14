@@ -22,5 +22,21 @@ namespace MaximumOfThreeVariblesTest
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
+
+        [Test]
+        public void GivenSecondNumberMax_WhenAct_ReturnSecondNumber()
+        {
+            // Arrange
+            int firstNumber = 540;
+            int secondNumber = 692;
+            int thirdNumber = 436;
+            int expected = 692;
+
+            // Act
+            int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
+
+            // Assert
+            Assert.AreEqual(expected, maxNumber);
+        }
     }
 }
