@@ -17,7 +17,7 @@ namespace MaximumOfThreeVariblesTest
             int expected = 10;
 
             // Act
-            int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
+            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -33,7 +33,7 @@ namespace MaximumOfThreeVariblesTest
             int expected = 692;
 
             // Act
-            int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
+            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -49,7 +49,7 @@ namespace MaximumOfThreeVariblesTest
             int expected = 911;
 
             // Act
-            int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
+            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -65,7 +65,7 @@ namespace MaximumOfThreeVariblesTest
             float expected = 35.1f;
 
             // Act
-            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -81,7 +81,7 @@ namespace MaximumOfThreeVariblesTest
             float expected = 35.1f;
 
             // Act
-            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -97,7 +97,7 @@ namespace MaximumOfThreeVariblesTest
             float expected = 35.1f;
 
             // Act
-            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
@@ -113,7 +113,7 @@ namespace MaximumOfThreeVariblesTest
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
 
             // Assert
             Assert.AreEqual(expected, maxString);
@@ -129,7 +129,7 @@ namespace MaximumOfThreeVariblesTest
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
 
             // Assert
             Assert.AreEqual(expected, maxString);
@@ -145,7 +145,7 @@ namespace MaximumOfThreeVariblesTest
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Maxstring(firstWord, secondWord, thirdWord);
+            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
 
             // Assert
             Assert.AreEqual(expected, maxString);

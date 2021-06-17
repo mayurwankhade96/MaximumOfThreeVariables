@@ -6,37 +6,32 @@ namespace MaximumOfThreeVariables
 {
     public class MaxNumber
     {
-        public int MaxInteger(int firstNumber, int secondNumber, int thirdNumber)
+        /// <summary>
+        /// Generic method to find max value
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <param name="thirdNumber"></param>
+        /// <returns></returns>
+        public T Max<T>(T firstNumber, T secondNumber, T thirdNumber) where T : IComparable
         {
-            if ((firstNumber.CompareTo(secondNumber) > 0) && (firstNumber.CompareTo(thirdNumber) > 0))
+            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0 ||
+                firstNumber.CompareTo(secondNumber) >= 0 && firstNumber.CompareTo(thirdNumber) > 0 ||
+                firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) >= 0)
                 return firstNumber;
-            if ((secondNumber.CompareTo(firstNumber) > 0) && (secondNumber.CompareTo(thirdNumber) > 0))
-                return secondNumber;
-            if ((thirdNumber.CompareTo(firstNumber) > 0) && (thirdNumber.CompareTo(secondNumber) > 0))
-                return thirdNumber;
-            return 0;
-        }
 
-        public float MaxFloat(float firstNumber, float secondNumber, float thirdNumber)
-        {
-            if ((firstNumber.CompareTo(secondNumber) > 0) && (firstNumber.CompareTo(thirdNumber) > 0))
-                return firstNumber;
-            if ((secondNumber.CompareTo(firstNumber) > 0) && (secondNumber.CompareTo(thirdNumber) > 0))
+            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0 ||
+                secondNumber.CompareTo(firstNumber) >= 0 && secondNumber.CompareTo(thirdNumber) > 0 ||
+                secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) >= 0)
                 return secondNumber;
-            if ((thirdNumber.CompareTo(firstNumber) > 0) && (thirdNumber.CompareTo(secondNumber) > 0))
-                return thirdNumber;
-            return 0;
-        }
 
-        public string Maxstring(string firstWord, string secondWord, string thirdWord)
-        {
-            if ((firstWord.CompareTo(secondWord) > 0) && (firstWord.CompareTo(thirdWord) > 0))
-                return firstWord;
-            if ((secondWord.CompareTo(firstWord) > 0) && (secondWord.CompareTo(thirdWord) > 0))
-                return secondWord;
-            if ((thirdWord.CompareTo(firstWord) > 0) && (thirdWord.CompareTo(secondWord) > 0))
-                return thirdWord;
-            return null;
+            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0 ||
+                thirdNumber.CompareTo(firstNumber) >= 0 && thirdNumber.CompareTo(secondNumber) > 0 ||
+                thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) >= 0)
+                return thirdNumber;
+
+            throw new Exception("All values are same");
         }
     }
 }
