@@ -7,11 +7,14 @@ namespace MaximumOfThreeVariables
         static void Main()
         {
             // Creating object
-            MaxNumber max = new MaxNumber();
+            MaxNumber<int> max = new MaxNumber<int>(45,56,54);
+            MaxNumber<float> maxfloat = new MaxNumber<float>(45.45f, 56.12f, 54.457f);
+            MaxNumber<string> maxstring = new MaxNumber<string>("Apple", "Peach", "Banana");
 
-            Console.WriteLine(max.Max<int>(45, 56, 41));
-            Console.WriteLine(max.Max<float>(45.12f, 36.45f, 12.11f));
-            Console.WriteLine(max.Max<string>("Apple", "Peach", "Banana"));
+
+            Console.WriteLine(max.Max());
+            Console.WriteLine(maxfloat.Max());
+            Console.WriteLine(maxstring.Max());
         }
     }
 }

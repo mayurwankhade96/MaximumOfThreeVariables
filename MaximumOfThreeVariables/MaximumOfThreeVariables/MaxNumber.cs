@@ -4,34 +4,45 @@ using System.Text;
 
 namespace MaximumOfThreeVariables
 {
-    public class MaxNumber
+    public class MaxNumber<T> where T : IComparable
     {
+        public T firstValue, secondValue, thirdValue;
+
         /// <summary>
-        /// Generic method to find max value
+        /// Constructor
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
-        /// <param name="thirdNumber"></param>
-        /// <returns></returns>
-        public T Max<T>(T firstNumber, T secondNumber, T thirdNumber) where T : IComparable
+        /// <param name="fValue"></param>
+        /// <param name="sValue"></param>
+        /// <param name="tValue"></param>
+        public MaxNumber(T fValue, T sValue, T tValue)
         {
-            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0 ||
-                firstNumber.CompareTo(secondNumber) >= 0 && firstNumber.CompareTo(thirdNumber) > 0 ||
-                firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) >= 0)
-                return firstNumber;
+            firstValue = fValue;
+            secondValue = sValue;
+            thirdValue = tValue;
+        }
 
-            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0 ||
-                secondNumber.CompareTo(firstNumber) >= 0 && secondNumber.CompareTo(thirdNumber) > 0 ||
-                secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) >= 0)
-                return secondNumber;
+        /// <summary>
+        /// Method to find maximum
+        /// </summary>
+        /// <returns></returns>
+        public T Max()
+        {
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
+                return firstValue;
 
-            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0 ||
-                thirdNumber.CompareTo(firstNumber) >= 0 && thirdNumber.CompareTo(secondNumber) > 0 ||
-                thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) >= 0)
-                return thirdNumber;
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
+                return secondValue;
 
-            throw new Exception("All values are same");
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0 ||
+                thirdValue.CompareTo(firstValue) >= 0 && thirdValue.CompareTo(secondValue) > 0 ||
+                thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) >= 0)
+                return thirdValue;
+
+            return default;
         }
     }
 }
