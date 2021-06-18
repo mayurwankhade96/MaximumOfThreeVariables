@@ -7,11 +7,17 @@ namespace MaximumOfThreeVariables
     public class MaxNumber
     {
         dynamic temp;
+
+        /// <summary>
+        /// Method  to sort array
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         public void MaxValue<T>(T[] array) where T : IComparable
         {
             for (int i = 0; i < array.Length - 1; i++) // For number of passes
             {
-                for (int j = 0; j < array.Length - 1 - i; j++)
+                for (int j = 0; j < array.Length - 1 - i; j++) // For comparison in each pass
                 {
                     if (array[j].CompareTo(array[j + 1]) > 0)
                     {
